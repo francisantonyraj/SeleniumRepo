@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <!--    <parameter name="test1" value="Ram"></parameter>-->
+    <!--    <parameter name="test2" value="Sam"></parameter>-->
+    <!--    <parameter name="test3" value="Ravi"></parameter>-->
+    <!--    <parameter name="test4" value="Suresh"></parameter>-->
+
+
+    <test verbose="2" preserve-order="true" name="C:/Users/Navis/IdeaProjects/SeleniumTestNG">
+        <parameter name="xpathValue1" value="//*[text()='Login']"></parameter>
+        <parameter name="xpathValue2" value="//*[text()='Username']"></parameter>
+        <parameter name="xpathValue3" value="//*[text()='Password']"></parameter>
+
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name="SmokeTest"/>-->
+        <!--            </run>-->
+        <!--        </groups>-->
+
+        <classes>
+            <class name="com.test.scenarios.Scenario_09"/>
+            <!--            <class name="com.test.scenarios.Scenario_02"/>-->
+            <!--            <class name="com.test.scenarios.Scenario_03"/>-->
+        </classes>
+
+    </test>
+
+</suite>
