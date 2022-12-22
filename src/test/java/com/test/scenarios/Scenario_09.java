@@ -18,7 +18,6 @@ public class Scenario_09 {
 
     @BeforeClass
     public void setup() {
-
         webDriver = new ChromeDriver();
     }
 
@@ -40,22 +39,14 @@ public class Scenario_09 {
         Assert.assertEquals(true, loginPage.isPasswordLabel());
     }
 
-
-    @Test
-    @Parameters({"xpathValue1"})
-    public void testCase02(String value1) {
-        loginPage.setPageHeader(findElement(webDriver, value1).isDisplayed());
-//        loginPage.setPasswordLabel(findElement(webDriver, value2).isDisplayed());
-//        loginPage.setUsernameLabel(findElement(webDriver, value3).isDisplayed());
-
-        Assert.assertEquals(true, loginPage.isPageHeader());
-        Assert.assertEquals(true, loginPage.isUsernameLabel());
-        Assert.assertEquals(true, loginPage.isPasswordLabel());
-    }
-
     @AfterMethod
     public void close() {
         webDriver.close();
+    }
+
+    @AfterClass
+    public void quitDriver() {
+        webDriver.quit();
     }
 
     public WebElement findElement(WebDriver webDriver, String xpath) {

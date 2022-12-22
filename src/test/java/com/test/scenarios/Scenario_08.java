@@ -7,7 +7,7 @@ public class Scenario_08 {
 
     @DataProvider(name = "testData")
     public Object[][] dpMethod() {
-        return new Object[][]{{"Ram", 30}};
+        return new Object[][]{{"Ram", 30}, {"Sam", 28}};
     }
 
     @Test(dataProvider = "testData")

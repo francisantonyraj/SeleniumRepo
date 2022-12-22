@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test verbose="2" preserve-order="true" name="C:/Users/Navis/IdeaProjects/SeleniumTestNG">
+        <groups>
+            <run>
+                <include name="SmokeTest"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.test.scenarios.Scenario_02"/>
+            <class name="com.test.scenarios.Scenario_03"/>
+        </classes>
+
+    </test>
+</suite>

@@ -20,8 +20,6 @@
 
         <classes>
             <class name="com.test.scenarios.Scenario_09"/>
-            <!--            <class name="com.test.scenarios.Scenario_02"/>-->
-            <!--            <class name="com.test.scenarios.Scenario_03"/>-->
         </classes>
 
     </test>
