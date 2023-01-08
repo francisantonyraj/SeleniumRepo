@@ -1,6 +1,5 @@
 package com.test.scenarios;
 
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class Scenario_02 {
