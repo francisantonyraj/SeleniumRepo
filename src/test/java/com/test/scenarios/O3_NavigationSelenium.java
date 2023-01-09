@@ -31,6 +31,7 @@ public class O3_NavigationSelenium {
         webElement.click();
         webDriver.navigate().back();
         webDriver.navigate().forward();
+        webDriver.navigate().refresh();
     }
 
     @AfterClass

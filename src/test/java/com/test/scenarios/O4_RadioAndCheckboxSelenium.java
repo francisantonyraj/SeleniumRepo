@@ -22,15 +22,18 @@ public class O4_RadioAndCheckboxSelenium {
     public void launch() throws InterruptedException {
         webDriver.manage().window().maximize();
         Thread.sleep(5000);
-        webDriver.findElement(By.xpath("//input[@class='oxd-input oxd-input--active' and @placeholder='Username']")).sendKeys("Admin");
-        webDriver.findElement(By.xpath("//input[@class='oxd-input oxd-input--active' and @placeholder='Password']")).sendKeys("admin123");
+        webDriver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
+        webDriver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin123");
         webDriver.findElement(By.xpath("//button[text()=' Login ']")).click();
     }
 
     @Test
-    public void testCase01() {
-        webDriver.findElement(By.xpath("//*[@type='radio' and @value='1']")).click();
-        webDriver.findElement(By.xpath("//input[@type='checkbox']")).click();
+    public void testCase01() throws InterruptedException {
+        Thread.sleep(5000);
+        webDriver.findElement(By.xpath("//span[text()='My Info']")).click();
+        Thread.sleep(5000);
+        webDriver.findElement(By.xpath("//*[text()='Male']")).click();
+        webDriver.findElement(By.xpath("//*[text()='Yes']")).click();
     }
 
     @AfterClass
