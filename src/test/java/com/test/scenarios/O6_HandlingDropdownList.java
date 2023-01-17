@@ -36,7 +36,6 @@ public class O6_HandlingDropdownList {
             Assert.assertEquals(options[i], e.getText());
             i++;
         }
-
         select.selectByIndex(1);
         Thread.sleep(3000);
         select.selectByValue("option 3");

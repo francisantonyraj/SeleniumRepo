@@ -18,11 +18,12 @@ public class O7_HandlingFileUploadAutoIT {
     }
 
     @Test
-    public void testCase02() throws IOException, InterruptedException {
+    public void testCase01() throws IOException, InterruptedException {
         webDriver.manage().window().maximize();
         Thread.sleep(3000);
         webDriver.findElement(By.xpath("//span[@class='browse-text']")).click();
         Thread.sleep(3000);
         Runtime.getRuntime().exec("C:\\Users\\Navis\\OneDrive\\Desktop\\Sample\\FileUpload.exe");
+        Thread.sleep(3000);
     }
 }
