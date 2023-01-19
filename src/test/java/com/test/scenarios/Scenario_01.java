@@ -72,8 +72,8 @@ public class Scenario_01 {
     public void screenshot(ITestResult result) throws IOException {
         //when there is failure
         if (ITestResult.FAILURE == result.getStatus()) {
-            extentTest.log(LogStatus.FAIL, "Test Case Failed "+result.getName());
-            extentTest.log(LogStatus.FAIL, "Test Case Failed "+result.getThrowable());
+            extentTest.log(LogStatus.FAIL, "Test Case Failed " + result.getName());
+            extentTest.log(LogStatus.FAIL, "Test Case Failed " + result.getThrowable());
 
             String screenShotPath = Scenario_01.getScreenshot(webDriver, result.getName());
             extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenShotPath));
@@ -92,6 +92,7 @@ public class Scenario_01 {
         FileUtils.copyFile(source, finalDestination);
         return destination;
     }
+
     @AfterClass
     public void close() {
         webDriver.quit();
