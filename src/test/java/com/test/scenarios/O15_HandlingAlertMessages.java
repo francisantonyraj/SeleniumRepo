@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 public class O15_HandlingAlertMessages {
     private WebDriver webDriver;
-    private Alert alert;
 
     @BeforeClass
     public void setUp() {
@@ -24,29 +23,26 @@ public class O15_HandlingAlertMessages {
         webDriver.manage().window().maximize();
     }
 
-//    @Test
-//    public void testCase01() {
-//        webDriver.findElement(By.xpath("//button[@class='alertMessage']")).click();
-//        String text = webDriver.switchTo().alert().getText();
-//        Assert.assertEquals(text, "Hello World");
-//        webDriver.switchTo().alert().accept();
-//    }
+    @Test
+    public void testCase01() {
+        webDriver.findElement(By.xpath("//button[@class='alertMessage']")).click();
+        String text = webDriver.switchTo().alert().getText();
+        Assert.assertEquals(text, "Hello World");
+        webDriver.switchTo().alert().accept();
+    }
 
-    //
-//    @Test
-//    public void testCase02() {
-//        webDriver.findElement(By.xpath("//button[@class='confirmMessage']")).click();
-//        webDriver.switchTo().alert().accept();
-//    }
+    @Test
+    public void testCase02() {
+        webDriver.findElement(By.xpath("//button[@class='confirmMessage']")).click();
+        webDriver.switchTo().alert().accept();
+    }
+
     @Test
     public void testCase03() throws InterruptedException {
 
-        webDriver.findElement(By.xpath("//button[@class='promtMessage']")).click();
-        alert = webDriver.switchTo().alert();
-        Thread.sleep(3000);
+        webDriver.findElement(By.xpath("//button[@class='promptMessage']")).click();
+        Alert alert = webDriver.switchTo().alert();
         alert.sendKeys("Bangalore");
-        Thread.sleep(3000);
-//        alert.accept();
-//        webDriver.switchTo().alert().sendKeys("Bangalore");
+        alert.accept();
     }
 }
