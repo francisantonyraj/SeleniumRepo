@@ -34,11 +34,12 @@ public class O13_CaptureErrorMessage {
                         .visibilityOfElementLocated(By.xpath("//input[@placeholder='Enter your active Email ID / Username']")))
                 .sendKeys("abc");
         webDriver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("abc");
+
         webDriver.findElement(By.xpath("//button[text()='Login']")).click();
 
         String errMsg = wait.until(ExpectedConditions
                         .visibilityOfElementLocated(By.xpath("//div[@class='server-err']")))
                 .getText();
-        Assert.assertEquals("Invalid details. Please check the Email ID - Password combination.", errMsg);
+        Assert.assertEquals(errMsg, "Invalid details. Please check the Email ID - Password combination.");
     }
 }

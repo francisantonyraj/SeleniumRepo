@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 
 public class O12_TakeMultipleScreenshot {
     private WebDriver webDriver;
@@ -28,10 +27,10 @@ public class O12_TakeMultipleScreenshot {
     @Test
     public void testCase01() throws IOException {
         WebElement element = webDriver.findElement(By.xpath("//*[@class='gh-tb ui-autocomplete-input']"));
-        screenCapture();
+        screenCapture();//First screenshot
         element.sendKeys("Laptop");
         element.sendKeys(Keys.ENTER);
-        screenCapture();
+        screenCapture();//Second screenshot
     }
 
     public void screenCapture() throws IOException {
