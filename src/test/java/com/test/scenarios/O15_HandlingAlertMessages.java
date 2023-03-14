@@ -21,6 +21,7 @@ public class O15_HandlingAlertMessages {
     public void launch() {
         webDriver.get("https://francisantonyraj.github.io/");
         webDriver.manage().window().maximize();
+
     }
 
     @Test
@@ -29,6 +30,7 @@ public class O15_HandlingAlertMessages {
         String text = webDriver.switchTo().alert().getText();
         Assert.assertEquals(text, "Hello World");
         webDriver.switchTo().alert().accept();
+
     }
 
     @Test

@@ -86,6 +86,7 @@ public class O9_MouseHoverAndKeyboard {
         actions.keyUp(Keys.CONTROL);
         actions.build().perform();
 
+        
         //move to the permanent address field
         actions.sendKeys(Keys.TAB);
         actions.build().perform();

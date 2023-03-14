@@ -33,6 +33,8 @@ public class O8_DragAndDropSelenium {
         target = webDriver.findElement(By.id("droppable"));
         Actions actions = new Actions(webDriver);
         actions.dragAndDrop(source, target).perform();
+        
+
         String value = webDriver.findElement(By.xpath("//*[text()='Dropped!']")).getText();
         Thread.sleep(3000);
         Assert.assertEquals("Dropped!", value);

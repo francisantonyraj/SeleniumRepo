@@ -14,4 +14,6 @@ public class Scenario_06 {
     public void testCase01(int data,int data1,int data2) {
         System.out.println("Data is : " + data);
     }
+
+
 }

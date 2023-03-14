@@ -47,15 +47,18 @@ public class O10_SynchronizationWebDriverWait {
         long start = System.currentTimeMillis();
         WebDriverWait webDriverWait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='hl-cta__default hl-cta__default-js hl-loyalty__call-to-action']")));
+
         long end = System.currentTimeMillis();
 
         System.out.println("Time taken to execute the step :" + (end - start));
     }
 
-//    @Ignore
+    //    @Ignore
     @Test
     public void testCase03() {
         long start = System.currentTimeMillis();
+
+
         Wait<WebDriver> wait = new FluentWait<>(webDriver)
                 .withTimeout(Duration.ofSeconds(6)) //maximum
                 .pollingEvery(Duration.ofSeconds(2)) //frequency

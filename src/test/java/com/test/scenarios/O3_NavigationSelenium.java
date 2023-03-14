@@ -32,6 +32,7 @@ public class O3_NavigationSelenium {
         webDriver.navigate().back();
         webDriver.navigate().forward();
         webDriver.navigate().refresh();
+        webDriver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
 
     @AfterClass
